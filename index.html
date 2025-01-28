@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Hunter API - Monstruos</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!--Contenedores de filtros-->
+    <div class="filter-container" id="filterContainer">
+        <div class="filter-section" id="elementsSection">
+            <h3>Elementos</h3>
+        </div>
+        <div class="filter-section" id="statesSection">
+            <h3>Estados</h3>
+        </div>
+        <div class="filter-section" id="weaknessesSection">
+            <h3>Debilidades</h3>
+        </div>
+        <div class="filter-section" id="resetSection">
+            <h3>Reiniciar Filtros</h3>
+        </div>
+    </div>
+    <div class="monsters-container" id="monstersContainer"></div>
+    <div class="modal" id="monsterModal">
+        <div class="modal-content" id="modalContent">
+            <button class="close-btn" onclick="closeModal()">Cerrar</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

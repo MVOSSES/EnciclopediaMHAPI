@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cbbc96;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.filter-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+.filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.filter-section h3 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #4d2b16;
+    font-size: 16px;
+}
+.filter-container button {
+    background: #af8a58;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.filter-container img {
+    width: 20px;
+    height: 20px;
+}
+.monsters-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+}
+.mini-card {
+    background: #af8a58;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    width: 150px;
+    cursor: pointer;
+}
+.mini-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.imagen-tarjeta{
+    width: auto;
+    height: auto;
+    max-height: 325px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: #af8a58;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    position: relative; /* Necesario para posicionar el botón */
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-weight: bold;
+}
+.botones1{
+    background-image: linear-gradient(to right, #1c0704, #644020);
+    color: #d4cca0;
+    border-color: #a0835a;
+    cursor: pointer;
+}
+.botones1:hover {
+    background-image: linear-gradient(to right, #af8a58, #d4cca0);
+    color: #1c0704;
+    border-color: #1c0704;
+}
