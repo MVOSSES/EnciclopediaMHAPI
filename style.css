@@ -68,7 +68,13 @@ body {
     width: auto;
     height: auto;
     max-height: 325px;
-    max-width: 70%;
+}
+@media (max-width: 600px) {
+    .imagen-tarjeta{
+        width: auto;
+        height: auto;
+        max-width: 70%;
+    }
 }
 .modal {
     display: none;
