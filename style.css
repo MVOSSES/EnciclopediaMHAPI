@@ -129,6 +129,19 @@ body {
         flex-direction: row;
     }
 }
+@media (min-width: 700px ){
+    .modal-content {
+        flex-direction: row;
+        max-width: 90%;
+        max-height: 90%;
+    }
+    .imagen-tarjeta {
+        width: auto;
+        height: auto;
+        max-height: 250px;
+        filter: drop-shadow(-25px 10px 10px #1c0704);
+    }
+}
 
 .close-btn {
     position: absolute;
