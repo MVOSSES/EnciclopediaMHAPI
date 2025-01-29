@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #cbbc96;
+    background-image: linear-gradient(to right,#b38753, #f5ce83);
     margin: 0;
     padding: 20px;
     display: flex;
@@ -34,7 +34,7 @@ body {
 }
 
 .filter-container button {
-    background: #af8a58;
+    background-image: linear-gradient(to right,#b07131, #af8a58);
     border: none;
     padding: 8px;
     border-radius: 8px;
@@ -44,6 +44,7 @@ body {
     justify-content: center;
     width: 40px;
     height: 40px;
+    border: #1c0704 2px solid;
 }
 
 .filter-container button img {
@@ -61,20 +62,21 @@ body {
 }
 
 .mini-card {
-    background: #af8a58;
+    background-image: linear-gradient(to right,#b07131, #af8a58);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 10px;
     text-align: center;
     width: 150px;
     cursor: pointer;
+    border: #1c0704 2px solid;
 }
 
 .mini-card img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    filter: drop-shadow(10px 10px 10px #1c0704);
+    filter: drop-shadow(-10px 10px 10px #1c0704);
 }
 
 .imagen-tarjeta {
@@ -110,7 +112,7 @@ body {
 }
 
 .modal-content {
-    background: #af8a58;
+    background-image: linear-gradient(to right,#a0835a, #e2cc99);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -146,10 +148,11 @@ body {
     color: #d4cca0;
     border-color: #a0835a;
     cursor: pointer;
+    border-radius: 10px;
+    &:hover{
+        background-image: linear-gradient(to right, #af8a58, #d4cca0);
+        color: #1c0704;
+        border-color: #1c0704;
+    }
 }
 
-.botones1:hover {
-    background-image: linear-gradient(to right, #af8a58, #d4cca0);
-    color: #1c0704;
-    border-color: #1c0704;
-}

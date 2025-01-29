@@ -99,7 +99,7 @@ function populateFilters() {
 
     resetSection.innerHTML = ''; // Limpia botón de reinicio antes de agregarlo
     const resetButton = document.createElement('button');
-    resetButton.textContent = 'Reiniciar';
+    resetButton.innerHTML ='<img src="./img/reiniciar.png" alt="Reiniciar Filtros">';
     resetButton.onclick = () => renderMonsters(allMonsters);
     resetSection.appendChild(resetButton);
 }
