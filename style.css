@@ -7,6 +7,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 .filter-container {
     width: 100%;
     display: flex;
@@ -15,34 +16,42 @@ body {
     margin-bottom: 20px;
     gap: 20px;
 }
+
 .filter-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
 }
+
 .filter-section h3 {
     width: 100%;
     text-align: center;
+    font-size: 16px;
+    font-weight: bold;
     margin-bottom: 10px;
     color: #4d2b16;
-    font-size: 16px;
 }
+
 .filter-container button {
     background: #af8a58;
     border: none;
-    padding: 5px 8px;
+    padding: 8px;
     border-radius: 8px;
-    font-size: 12px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 5px;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
 }
-.filter-container img {
-    width: 20px;
-    height: 20px;
+
+.filter-container button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
+
 .monsters-container {
     display: flex;
     flex-wrap: wrap;
@@ -50,6 +59,7 @@ body {
     gap: 20px;
     max-width: 1200px;
 }
+
 .mini-card {
     background: #af8a58;
     border-radius: 8px;
@@ -59,23 +69,34 @@ body {
     width: 150px;
     cursor: pointer;
 }
+
 .mini-card img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    filter: drop-shadow(10px 10px 10px #1c0704);
 }
-.imagen-tarjeta{
+
+.imagen-tarjeta {
     width: auto;
     height: auto;
     max-height: 325px;
+    filter: drop-shadow(-25px 10px 10px #1c0704);
 }
+
 @media (max-width: 600px) {
-    .imagen-tarjeta{
+    .imagen-tarjeta {
         width: auto;
         height: auto;
-        max-width: 70%;
+        max-width: 90%;
+    }
+    .modal-content {
+        height: 90vh; /* Aumenta la altura manualmente */
+        max-height: 90vh; /* Evita que se pase del 90% de la pantalla */
+        overflow-y: auto; /* Permite desplazamiento si el contenido es demasiado grande */
     }
 }
+
 .modal {
     display: none;
     position: fixed;
@@ -87,14 +108,26 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .modal-content {
     background: #af8a58;
     padding: 20px;
     border-radius: 8px;
-    width: 400px;
     text-align: center;
-    position: relative; /* Necesario para posicionar el botón */
+    position: relative;
+    max-width: 70%;
+    max-height: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
+
+@media (min-width: 1024px) {
+    .modal-content {
+        flex-direction: row;
+    }
+}
+
 .close-btn {
     position: absolute;
     top: 10px;
@@ -107,12 +140,14 @@ body {
     border-radius: 50%;
     font-weight: bold;
 }
-.botones1{
+
+.botones1 {
     background-image: linear-gradient(to right, #1c0704, #644020);
     color: #d4cca0;
     border-color: #a0835a;
     cursor: pointer;
 }
+
 .botones1:hover {
     background-image: linear-gradient(to right, #af8a58, #d4cca0);
     color: #1c0704;

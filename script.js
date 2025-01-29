@@ -62,22 +62,26 @@ function showModal(monsterId) {
 
     modalContent.innerHTML = `
         <button class="close-btn" onclick="closeModal()">X</button>
-        <img class="imagen-tarjeta" src="${monster.imagen}" alt="${monster.nombre}">
-        <h3>${monster.nombre}</h3>
-        <p>Clase: ${monster.clase.nombre}</p>
-        <div class="element">
-            <p>Elemento:</p>
-            ${monster.elemento.map(el => `<span><img src="${el.icono}" alt="${el.nombre}"></span>`).join(' ')}
+        <div class="imagen-container">
+            <img class="imagen-tarjeta" src="${monster.imagen}" alt="${monster.nombre}">
+            <h3>${monster.nombre}</h3>
         </div>
-        <div class="element">
-            <p>Plagas:</p>
-            ${monster.estado.map(es => `<span><img src="${es.icono}" alt="${es.nombre}"></span>`).join(' ')}
+        <div class="info-container">
+            <p><strong>Clase:</strong> ${monster.clase.nombre}</p>
+            <div class="element">
+                <p><strong>Elemento:</strong></p>
+                ${monster.elemento.map(el => `<span><img src="${el.icono}" alt="${el.nombre}"></span>`).join(' ')}
+            </div>
+            <div class="element">
+                <p><strong>Plagas:</strong></p>
+                ${monster.estado.map(es => `<span><img src="${es.icono}" alt="${es.nombre}"></span>`).join(' ')}
+            </div>
+            <div class="element">
+                <p><strong>Debilidad:</strong></p>
+                ${monster.debilidad.map(de => `<span><img src="${de.icono}" alt="${de.nombre}"></span>`).join(' ')}
+            </div>
+            <p><strong>Tamaño:</strong> ${monster.min_size} - ${monster.max_size} m</p>
         </div>
-        <div class="element">
-            <p>Debilidad:</p>
-            ${monster.debilidad.map(de => `<span><img src="${de.icono}" alt="${de.nombre}"></span>`).join(' ')}
-        </div>
-        <p>Tamaño: ${monster.min_size} - ${monster.max_size} m</p>
     `;
     modal.style.display = 'flex';
 }
@@ -102,9 +106,16 @@ function populateFilters() {
 
 function populateFilterSection(map, section, callback) {
     section.innerHTML = ''; // Limpia antes de agregar nuevos elementos
+
+    const title = document.createElement('h3');
+    title.textContent = section.id === 'elementsSection' ? 'Elementos' :
+                        section.id === 'statesSection' ? 'Estados' :
+                        section.id === 'weaknessesSection' ? 'Debilidades' : '';
+    section.appendChild(title);
+
     map.forEach((icon, name) => {
         const button = document.createElement('button');
-        button.innerHTML = `<img src="${icon}" alt="${name}"> ${name}`;
+        button.innerHTML = `<img src="${icon}" alt="${name}">`; // Solo imagen
         button.onclick = () => callback(name);
         section.appendChild(button);
     });
