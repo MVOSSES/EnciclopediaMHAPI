@@ -6,6 +6,55 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #1c0704;
+}
+
+/* Contenedor superior con título e imagen */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 10px;
+}
+
+/* Título */
+.tituloPagina {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1c0704;
+    filter: drop-shadow(3px -3px 1px #77340f);
+    text-shadow: -1px -1px 0 #4d2b16,
+                1px -1px 0 #4d2b16,
+                -1px 1px 0 #4d2b16,
+                1px 1px 0 #4d2b16;
+}
+
+/* Imagen en la parte superior derecha */
+.header-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    filter: drop-shadow(-10px 10px 10px #1c0704);
+}
+
+/* Adaptabilidad en móviles */
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tituloPagina {
+        font-size: 20px;
+    }
+
+    .header-image img {
+        width: 220px;
+        margin-top: 10px;
+    }
 }
 
 .filter-container {
@@ -22,6 +71,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    max-width: 30%;
 }
 
 .filter-section h3 {
@@ -71,19 +121,24 @@ body {
     cursor: pointer;
     border: #1c0704 2px solid;
 }
+@media (max-width: 406px) {
+    .mini-card{
+        width: 140px;
+    }
+}
 
 .mini-card img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    filter: drop-shadow(-10px 10px 10px #1c0704);
+    filter: drop-shadow(-10px 10px 3px #1c0704);
 }
 
 .imagen-tarjeta {
     width: auto;
     height: auto;
     max-height: 325px;
-    filter: drop-shadow(-25px 10px 10px #1c0704);
+    filter: drop-shadow(-25px 7px 10px #1c0704);
 }
 
 @media (max-width: 600px) {
@@ -122,6 +177,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    overflow-y: auto;
 }
 
 @media (min-width: 1024px) {
@@ -139,7 +195,7 @@ body {
         width: auto;
         height: auto;
         max-height: 250px;
-        filter: drop-shadow(-25px 10px 10px #1c0704);
+        filter: drop-shadow(-25px 7px 5px #1c0704);
     }
 }
 
@@ -168,4 +224,3 @@ body {
         border-color: #1c0704;
     }
 }
-

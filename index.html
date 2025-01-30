@@ -7,27 +7,44 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <!--Contenedores de filtros-->
+    <!-- Contenedor superior -->
+    <div class="header-container">
+        <div class="tituloPagina"> 
+            <h1>Monster Hunter:</h1>
+            <h1>Bestiario</h1>
+        </div>
+        <div class="header-image">
+            <img src="./img/mhp3rd.png" alt="Imagen de cabecera">
+        </div>
+    </div>
+
     <div class="filter-container" id="filterContainer">
         <div class="filter-section" id="elementsSection">
             <h3>Elementos:</h3>
         </div>
+        <div class="filter-section" id="resetSection">
+            <h3>Reiniciar Filtros</h3>
+        </div>
+    </div>
+
+    <div class="monsters-container" id="monstersContainer"></div>
+
+    <div class="modal" id="monsterModal">
+        <div class="modal-content" id="modalContent">
+            <button class="close-btn" onclick="closeModal()">Cerrar</button>
+        </div>
+    </div>
+    
+    <!-- Contenedores de filtros -->
+    <div class="filter-container" id="filterContainer">
         <div class="filter-section" id="statesSection">
             <h3>Estados:</h3>
         </div>
         <div class="filter-section" id="weaknessesSection">
             <h3>Debilidades:</h3>
         </div>
-        <div class="filter-section" id="resetSection">
-            <h3>Reiniciar Filtros</h3>
-        </div>
     </div>
-    <div class="monsters-container" id="monstersContainer"></div>
-    <div class="modal" id="monsterModal">
-        <div class="modal-content" id="modalContent">
-            <button class="close-btn" onclick="closeModal()">Cerrar</button>
-        </div>
-    </div>
+
     <script src="./script.js"></script>
 </body>
 </html>
