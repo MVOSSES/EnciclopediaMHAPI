@@ -24,11 +24,11 @@ body {
     font-size: 24px;
     font-weight: bold;
     color: #1c0704;
-    filter: drop-shadow(3px -3px 1px #77340f);
-    text-shadow: -1px -1px 0 #4d2b16,
-                1px -1px 0 #4d2b16,
-                -1px 1px 0 #4d2b16,
-                1px 1px 0 #4d2b16;
+    filter: drop-shadow(-5px 10px 3px #77340f);
+    text-shadow: -1px -1px 0 #a0835a,
+                1px -1px 0 #a0835a,
+                -1px 1px 0 #a0835a,
+                1px 1px 0 #a0835a;
 }
 
 /* Imagen en la parte superior derecha */
